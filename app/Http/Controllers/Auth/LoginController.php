@@ -105,8 +105,7 @@ class LoginController extends Controller
             $user = new User;
             $user->name = $data->name;
             $user->email = $data->email;
-            // $user->national_id = $data->national_id;
-            $user->national_id = '1023232323';
+            $user->national_id = '0';
             $user->social = [
                 $provider => [
                     'id' => $data->id,

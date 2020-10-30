@@ -1,7 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
+use App\Http\Middleware\CheckNationalId;
+use App\Http\Middleware\CheckGender;
+use Illuminate\Support\Facades\Auth;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +24,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes(['verify' => true]);
+Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware([CheckNationalId::class,CheckGender::class]);
+
+
+Route::get('/authorized', "AuthorizedController@index")->name('show-authorized');
+Route::match(['put', 'patch'], '/authorized', "AuthorizedController@update")->name('authorized');
 
 
 Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider')
@@ -35,4 +45,3 @@ Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCal
 
 
 
-    

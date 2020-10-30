@@ -80,7 +80,7 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                @foreach(['twitter', 'twitch'] as $provider)
+                                @foreach(['twitter', 'twitch','facebook'] as $provider)
                                 <a class="btn btn-link"
                                     href="{{ route('social.login', ['provider' => $provider]) }}">Login with
                                     {{ ucwords($provider) }}</a>
