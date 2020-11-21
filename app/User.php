@@ -44,4 +44,12 @@ class User extends Authenticatable
     {
         $this->attributes['email'] = strtolower($value);
     }
+
+    /**
+     * Get the posts for the blog post.
+     */
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }

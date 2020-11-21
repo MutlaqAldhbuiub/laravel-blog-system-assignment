@@ -8,7 +8,6 @@ use App\Http\Middleware\CheckGender;
 use Illuminate\Support\Facades\Auth;
 
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,22 +25,22 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware([CheckNationalId::class,CheckGender::class]);
-
-
-Route::get('/authorized', "AuthorizedController@index")->name('show-authorized');
-Route::match(['put', 'patch'], '/authorized', "AuthorizedController@update")->name('authorized');
-
-
 Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider')
     ->name('social.login');
 Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')
     ->name('social.callback');
 
+Route::middleware(['auth'])->group(function () {
+    // Authorized (check if he update his profile and successfully add gender & national id
+    Route::get('/authorized', "AuthorizedController@index")->name('show-authorized');
+    Route::match(['put', 'patch'], '/authorized', "AuthorizedController@update")->name('authorized');
 
 
+    Route::get('/home', 'HomeController@index')->name('home')->middleware([CheckNationalId::class,CheckGender::class]);
 
+    // Posts:
+    Route::get('/posts/create','PostController@create');
+    Route::get('/posts/{slug}','PostController@show')->name('showPost');
+    Route::post('/posts/create','PostController@store')->name('createPost');
 
-
-
-
+});
