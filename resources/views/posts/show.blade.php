@@ -10,6 +10,11 @@
                     <div class="card-body">
 
                         @isset($post)
+                            @if(!$GenderPrefer)
+                                <div class="alert alert-warning">
+                                    <b>This article is not preferred to you, according to your settings.</b>
+                                </div>
+                            @endif
                             <h2>{{$post->title}}</h2>
                             <p>
                                 {{$post->body}}

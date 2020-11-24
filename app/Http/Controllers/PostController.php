@@ -62,7 +62,7 @@ class PostController extends Controller
     {
         $post = Post::where('slug', '=', $slug)->firstOrFail();
         if($post){
-            return view("posts.show",["post" => $post]);
+            return view("posts.show",["post" => $post,"GenderPrefer" => $post->user->hasPrefer("Prefer gender")]);
         }
     }
 

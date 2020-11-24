@@ -15,12 +15,14 @@
                         @endif
 
                             @foreach ($posts as $post)
-                                <a href="{{$post->slug}}">
+                                <a href="posts/{{$post->slug}}">
                                     {{$post->title}}
                                 </a>
                                 <br>
                                 {{$post->body}}<br>
                                 {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }} {{-- TODO:: (THIS IS NOT THE BEST SOLUTION)--}}
+                                <br>
+                                {{$post->user->name}}
                                 <br>
                             @endforeach
 

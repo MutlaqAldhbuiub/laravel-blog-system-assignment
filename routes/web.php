@@ -35,7 +35,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/authorized', "AuthorizedController@index")->name('show-authorized');
     Route::match(['put', 'patch'], '/authorized', "AuthorizedController@update")->name('authorized');
 
+    // User:
+    Route::get('/settings',"SettingsController@index");
+    Route::post('/settings',"SettingsController@store")->name("settings-store");
 
+    // Main
     Route::get('/home', 'HomeController@index')->name('home')->middleware([CheckNationalId::class,CheckGender::class]);
 
     // Posts:

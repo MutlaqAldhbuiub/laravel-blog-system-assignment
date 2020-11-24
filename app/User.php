@@ -38,7 +38,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'social' => 'array',
+        "settings" => "array"
     ];
+
 
     public function setEmailAttribute($value)
     {
@@ -52,4 +54,35 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
+
+
+
+    public function prefers(){
+        return $this->belongsToMany(Prefer::class,'user_prefers','user_id','prefer_id');
+    }
+
+    public function hasAnyPrefer($prefers){
+        if (is_array($prefers)) {
+            foreach ($prefers as $prefer) {
+                if ($this->hasPrefer($prefer)) {
+                    return true;
+                }
+            }
+        } else {
+            if ($this->hasPrefer($prefers)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    public function hasPrefer($prefer)
+    {
+        if ($this->prefers()->where('title', $prefer)->first()) {
+            return true;
+        }
+        return false;
+    }
+
 }

@@ -8,8 +8,6 @@ use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
-    //
-
     public function index(){
         $posts = DB::table('posts')
             ->select(['title','slug','body','user_id','created_at'])
@@ -18,9 +16,6 @@ class PostController extends Controller
             ->orderBy('created_at', 'desc')
             ->get()
             ->toJson();
-
         return $posts;
-
-
     }
 }
