@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="83ede73d-f144-4474-8d15-59b7bf058e4c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_31_202430_create_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_31_202430_create_tags_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -35,6 +34,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -187,7 +192,8 @@
       <workItem from="1606093495091" duration="5690000" />
       <workItem from="1606172992252" duration="1000" />
       <workItem from="1606173006115" duration="5218000" />
-      <workItem from="1606189899926" duration="7787000" />
+      <workItem from="1606189899926" duration="8085000" />
+      <workItem from="1606244414496" duration="33346000" />
     </task>
     <servers />
   </component>
@@ -199,10 +205,14 @@
       <screen x="3360" y="0" width="1920" height="1080" />
     </state>
     <state x="3947" y="199" width="736" height="633" key="#Inspections/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@3360.0.1920.1080" timestamp="1606194905074" />
-    <state x="4051" y="275" width="528" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605994116852">
+    <state x="4112" y="200" width="405" height="630" key="#com.intellij.ide.util.MemberChooser" timestamp="1606282474232">
       <screen x="3360" y="0" width="1920" height="1080" />
     </state>
-    <state x="4051" y="275" width="528" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@3360.0.1920.1080" timestamp="1605994116852" />
+    <state x="4112" y="200" width="405" height="630" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@3360.0.1920.1080" timestamp="1606282474232" />
+    <state x="4047" y="227" width="528" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606295102892">
+      <screen x="3360" y="0" width="1920" height="1080" />
+    </state>
+    <state x="4047" y="227" width="528" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@3360.0.1920.1080" timestamp="1606295102892" />
     <state x="4113" y="430" width="399" height="144" key="NewPhpFileDialog" timestamp="1605996983463">
       <screen x="3360" y="0" width="1920" height="1080" />
     </state>
@@ -216,17 +226,20 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="1887" y="163" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@1440.0.1920.1080" timestamp="1604964295070" />
-    <state x="3708" y="60" width="1209" height="863" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605998223542">
-      <screen x="3360" y="0" width="1920" height="1080" />
+    <state x="1786" y="36" width="1209" height="863" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606269563354">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
+    <state x="1786" y="36" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@1440.0.1920.1080" timestamp="1606269563354" />
     <state x="3708" y="60" width="1209" height="863" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@3360.0.1920.1080" timestamp="1605998223542" />
-    <state x="3982" y="249" key="run.anything.popup" timestamp="1606195000923">
-      <screen x="3360" y="0" width="1920" height="1080" />
+    <state x="2062" y="249" key="run.anything.popup" timestamp="1606271898162">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
+    <state x="2062" y="249" key="run.anything.popup/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@1440.0.1920.1080" timestamp="1606271898162" />
     <state x="3982" y="249" key="run.anything.popup/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@3360.0.1920.1080" timestamp="1606195000923" />
-    <state x="3983" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1606093713799">
+    <state x="3983" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1606298241036">
       <screen x="3360" y="0" width="1920" height="1080" />
     </state>
-    <state x="3983" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@3360.0.1920.1080" timestamp="1606093713799" />
+    <state x="2063" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@1440.0.1920.1080" timestamp="1606269527183" />
+    <state x="3983" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@3360.0.1920.1080" timestamp="1606298241036" />
   </component>
 </project>

@@ -8,6 +8,11 @@
                     <div class="card-header">{{ __('Dashboard') }}</div>
 
                     <div class="card-body">
+
+                        <a href="posts/create" class="btn btn-primary">
+                            CREATE POST
+                        </a>
+                        <br>
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
@@ -19,7 +24,6 @@
                                     {{$post->title}}
                                 </a>
                                 <br>
-                                {{$post->body}}<br>
                                 {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }} {{-- TODO:: (THIS IS NOT THE BEST SOLUTION)--}}
                                 <br>
                                 {{$post->user->name}}

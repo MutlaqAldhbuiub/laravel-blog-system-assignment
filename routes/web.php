@@ -36,7 +36,7 @@ Route::middleware(['auth'])->group(function () {
     Route::match(['put', 'patch'], '/authorized', "AuthorizedController@update")->name('authorized');
 
     // User:
-    Route::get('/settings',"SettingsController@index");
+    Route::get('/settings',"SettingsController@index")->name("settings");
     Route::post('/settings',"SettingsController@store")->name("settings-store");
 
     // Main

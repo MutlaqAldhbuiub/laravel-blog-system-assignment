@@ -20,5 +20,16 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
+    /**
+     * Get the comments for the blog post.
+     */
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+
+
+
 
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Cocur\Slugify\Slugify;
@@ -34,8 +35,7 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         $user = Auth::user();
         $slugify = new Slugify();
         $post = new Post();
@@ -58,11 +58,16 @@ class PostController extends Controller
      * @param  String  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post,$slug)
-    {
+    public function show(Post $post,$slug){
         $post = Post::where('slug', '=', $slug)->firstOrFail();
+
+        foreach ($post->comments as $comment){
+            $user = User::find($comment->user_id);
+            $comment->user = $user;
+        }
+
         if($post){
-            return view("posts.show",["post" => $post,"GenderPrefer" => $post->user->hasPrefer("Prefer gender")]);
+            return view("posts.show",["post" => $post,"GenderPrefer" => $post->user->hasPrefer("Prefer gender"),"comments" => $post->comments]);
         }
     }
 
@@ -99,4 +104,6 @@ class PostController extends Controller
     {
         //
     }
+
+
 }
