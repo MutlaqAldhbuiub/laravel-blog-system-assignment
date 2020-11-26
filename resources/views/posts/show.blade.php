@@ -248,8 +248,9 @@
 
             request.open('PUT', endpoint, true);
             request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-            // request.send();
-            console.log(encodeURIComponent(CKEDITOR.instances.bodyInput.getData()))
+            request.send();
+            // console.log(encodeURIComponent(CKEDITOR.instances.bodyInput.getData()))
+
 
             title.style.display = "block";
             body.style.display = "block";

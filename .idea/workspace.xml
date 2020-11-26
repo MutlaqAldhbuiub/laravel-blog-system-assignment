@@ -36,6 +36,10 @@
       <change afterPath="$PROJECT_DIR$/public/js/owl.carousel.min.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/js/rocket-loader.min.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/js/vendor/jquery-3.2.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/posts/showBackup.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/test.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
@@ -234,7 +238,7 @@
       <workItem from="1606173006115" duration="5218000" />
       <workItem from="1606189899926" duration="8085000" />
       <workItem from="1606244414496" duration="53171000" />
-      <workItem from="1606349605382" duration="1471000" />
+      <workItem from="1606349605382" duration="1823000" />
     </task>
     <servers />
   </component>
