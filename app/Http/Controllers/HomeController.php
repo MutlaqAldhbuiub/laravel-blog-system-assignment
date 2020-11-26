@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Carbon\Carbon;
 
 use Illuminate\Http\Request;
 use App\User;
@@ -26,6 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        Carbon::setLocale('ar');
         $allPosts = DB::table('posts')
             ->select('*')
             ->where('published','=',1)
@@ -45,7 +47,10 @@ class HomeController extends Controller
                 $post->user->social = null;
                 array_push($posts,$post);
             }
+            $post->created_at = Carbon::parse($post->created_at);
         }
+
+
 
         return view('home.home',['posts' => $posts]);
     }

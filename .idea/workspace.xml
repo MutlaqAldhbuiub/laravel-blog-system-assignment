@@ -5,15 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83ede73d-f144-4474-8d15-59b7bf058e4c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/magnific-popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/slicknav.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/29LTZaridSans-Bold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/29LTZaridSans-Regular.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/DiodrumArabic-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/blog/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/blog/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/blog/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/blog/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/blog/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/blog/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/blog/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/blog/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/blog/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/footer-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/page-banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/analytics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery.magnific-popup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery.slicknav.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/masonry.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/mixitup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/rocket-loader.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/vendor/jquery-3.2.1.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -155,6 +184,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1k4e9S1OE0FTFqtnlUAadNmHKWu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -166,10 +198,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/fonts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/fonts" />
+      <recent name="$PROJECT_DIR$/public/img" />
+      <recent name="$PROJECT_DIR$/public/js" />
+      <recent name="$PROJECT_DIR$/public/css" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -193,7 +233,8 @@
       <workItem from="1606172992252" duration="1000" />
       <workItem from="1606173006115" duration="5218000" />
       <workItem from="1606189899926" duration="8085000" />
-      <workItem from="1606244414496" duration="33346000" />
+      <workItem from="1606244414496" duration="53171000" />
+      <workItem from="1606349605382" duration="1471000" />
     </task>
     <servers />
   </component>
@@ -213,11 +254,11 @@
       <screen x="3360" y="0" width="1920" height="1080" />
     </state>
     <state x="4047" y="227" width="528" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@3360.0.1920.1080" timestamp="1606295102892" />
-    <state x="4113" y="430" width="399" height="144" key="NewPhpFileDialog" timestamp="1605996983463">
+    <state x="4111" y="406" width="399" height="144" key="NewPhpFileDialog" timestamp="1606336478463">
       <screen x="3360" y="0" width="1920" height="1080" />
     </state>
     <state x="2195" y="454" width="399" height="144" key="NewPhpFileDialog/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@1440.0.1920.1080" timestamp="1604964917054" />
-    <state x="4113" y="430" key="NewPhpFileDialog/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@3360.0.1920.1080" timestamp="1605996983463" />
+    <state x="4111" y="406" width="399" height="144" key="NewPhpFileDialog/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@3360.0.1920.1080" timestamp="1606336478463" />
     <state x="4091" y="231" width="448" height="569" key="RollbackChangesDialog" timestamp="1606192311826">
       <screen x="3360" y="0" width="1920" height="1080" />
     </state>
@@ -231,15 +272,15 @@
     </state>
     <state x="1786" y="36" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@1440.0.1920.1080" timestamp="1606269563354" />
     <state x="3708" y="60" width="1209" height="863" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@3360.0.1920.1080" timestamp="1605998223542" />
-    <state x="2062" y="249" key="run.anything.popup" timestamp="1606271898162">
-      <screen x="1440" y="0" width="1920" height="1080" />
+    <state x="3982" y="249" key="run.anything.popup" timestamp="1606348232358">
+      <screen x="3360" y="0" width="1920" height="1080" />
     </state>
     <state x="2062" y="249" key="run.anything.popup/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@1440.0.1920.1080" timestamp="1606271898162" />
-    <state x="3982" y="249" key="run.anything.popup/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@3360.0.1920.1080" timestamp="1606195000923" />
-    <state x="3983" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1606298241036">
+    <state x="3982" y="249" key="run.anything.popup/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@3360.0.1920.1080" timestamp="1606348232358" />
+    <state x="3983" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1606344726265">
       <screen x="3360" y="0" width="1920" height="1080" />
     </state>
     <state x="2063" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@1440.0.1920.1080" timestamp="1606269527183" />
-    <state x="3983" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@3360.0.1920.1080" timestamp="1606298241036" />
+    <state x="3983" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1440.900/1440.0.1920.1080/3360.0.1920.1080@3360.0.1920.1080" timestamp="1606344726265" />
   </component>
 </project>

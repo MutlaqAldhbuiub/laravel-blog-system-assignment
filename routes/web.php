@@ -23,6 +23,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test', function () {
+    return view('test');
+});
+
 Auth::routes();
 
 Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider')
@@ -43,7 +47,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/home', 'HomeController@index')->name('home')->middleware([CheckNationalId::class,CheckGender::class]);
 
     // Posts:
-    Route::get('/posts/create','PostController@create');
+    Route::get('/posts/create','PostController@create')->name("showCreatePost");
     Route::get('/posts/{slug}','PostController@show')->name('showPost');
     Route::post('/posts/create','PostController@store')->name('createPost');
 

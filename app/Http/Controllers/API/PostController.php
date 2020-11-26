@@ -53,7 +53,6 @@ class PostController extends Controller
         $post->title = $request->input("title");
         $post->body = $request->input("body");
         $post->published = (int) $request->input("published");
-        $post->image_url = $request->input("image_url");
         if($post->save()){
             return response()->json(["message" => "🚀🚀🚀 Updated!! 🚀🚀🚀","status" => 200]);
         }

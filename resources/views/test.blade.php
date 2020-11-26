@@ -32,7 +32,7 @@
 
             @if($GenderPrefer)
                 <p class="tracking-mode">
-                    هذا المنشور غير مفضل للاطلاع عليه حسب تفضيلاتك.
+                   هذا المنشور غير مفضل للاطلاع عليه حسب تفضيلاتك.
                     <i class="fa fa-exclamation-circle"></i>
                 </p>
             @endif
@@ -70,7 +70,7 @@
                         {!! $post->body !!}
                     </div>
 
-                    <textarea name="body" class="form-control" rows="3" style="display:none" id="bodyInput">
+                <textarea name="body" class="form-control" rows="3" style="display:none" id="bodyInput">
                                 {!! $post->body !!}
                 </textarea>
 
@@ -241,15 +241,15 @@
             let apiUrl = windowOBJECT.protocol+"//"+windowOBJECT.host+"/api/posts/{{$post->slug}}";
             var params = {
                 'title':titleInput.value,
-                'body':encodeURIComponent(CKEDITOR.instances.bodyInput.getData()),
+                'body':CKEDITOR.instances.bodyInput.getData(),
                 'published': published,
             }
             var endpoint = apiUrl + formatParams(params)
 
             request.open('PUT', endpoint, true);
             request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-            // request.send();
-            console.log(encodeURIComponent(CKEDITOR.instances.bodyInput.getData()))
+            request.send();
+
 
             title.style.display = "block";
             body.style.display = "block";
@@ -367,4 +367,4 @@
     <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 
     @endsection
-    </html>
+</html>

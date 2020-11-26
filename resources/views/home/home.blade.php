@@ -1,39 +1,36 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
-@section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
 
-                    <div class="card-body">
+@section('articles')
+    <section class="blog__section">
+        <div class="container primary">
+            <div class="titleholder">
+                <h1 class="entry-title highlight">التدوينات</h1>
+            </div>
 
-                        <a href="posts/create" class="btn btn-primary">
-                            CREATE POST
-                        </a>
-                        <br>
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
+            <p class="tracking-mode">
 
-                            @foreach ($posts as $post)
-                                <a href="posts/{{$post->slug}}">
-                                    {{$post->title}}
-                                </a>
-                                <br>
-                                {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }} {{-- TODO:: (THIS IS NOT THE BEST SOLUTION)--}}
-                                <br>
-                                {{$post->user->name}}
-                                <br>
-                            @endforeach
+                نظام مراقبة المنشورات بناء على جنسك
+                <span style="color:forestgreen">مفعل الان</span>
+                <i class="fa fa-filter"></i>
+            </p>
+            <div class="row blog_row">
 
+                @foreach ($posts as $post)
+
+                    <div class="col-lg-4 col-sm-6 blog__grid">
+                        <div class="blog__item">
+                            <img src="{{$post->image_url}}">
+                            <h3><a href="posts/{{$post->slug}}" class="underText">{{$post->title}}</a></h3>
+                            <div class="blog__item--date">{{ $post->created_at->diffForHumans() }}</div>
+                        </div>
                     </div>
-                </div>
+                @endforeach
+
+
             </div>
         </div>
-    </div>
-@endsection
+    </section>
+    @endsection
 
+    </html>

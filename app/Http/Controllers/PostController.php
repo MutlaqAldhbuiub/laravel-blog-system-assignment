@@ -7,6 +7,8 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Cocur\Slugify\Slugify;
+use Carbon\Carbon;
+
 
 class PostController extends Controller
 {
@@ -55,15 +57,25 @@ class PostController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Post  $post
-     * @param  String  $slug
+     * @param  String  $slug 24 نوفمبر، 2020
      * @return \Illuminate\Http\Response
      */
     public function show(Post $post,$slug){
+        Carbon::setLocale('ar');
         $post = Post::where('slug', '=', $slug)->firstOrFail();
+        $post->updated = false;
+        if($post->created_at != $post->updated_at){
+            $post->updated = true;
+            $post->updated_at = Carbon::parse($post->updated_at);
+        }
+        $post->created_at = Carbon::parse($post->created_at);
+
+
 
         foreach ($post->comments as $comment){
             $user = User::find($comment->user_id);
             $comment->user = $user;
+            $comment->created_at = Carbon::parse($comment->created_at);
         }
 
         if($post){

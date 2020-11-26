@@ -1,3 +1,8 @@
+<script>
+    if({{ Auth::check() }}){
+        window.location.replace('{{route('home')}}');
+    }
+</script>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
