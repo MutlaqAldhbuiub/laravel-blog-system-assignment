@@ -21,8 +21,10 @@ Blog built it with
 #### IMAGES
 
 ##### HOME
-![HOME](https://i.imgur.com/DwuLsuV.png)
+![HOME](https://i.imgur.com/7YP6rAf.png)
 
 ##### POST
-![POST](https://i.imgur.com/7YP6rAf.png)
+![POST](https://i.imgur.com/DwuLsuV.png)
+
+ 
 
