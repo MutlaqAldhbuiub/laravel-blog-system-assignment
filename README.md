@@ -16,6 +16,7 @@ Blog built it with
 - RTL full SUPPORT!
 - CKeditor 
 - SEO friend!
+- FULL ARABIC SUPPORT LIKE DATES AND FONTS AND INPUTS! ✨✨
 
 
 #### IMAGES
