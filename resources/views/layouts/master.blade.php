@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="/css/owl.carousel.min.css" />
 
     <link rel="stylesheet" href="/css/style.css" />
+
+    @yield('moreCSS')
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -50,17 +52,24 @@
                         @endif
                     @else
                         <li><a href="{{route('showCreatePost')}}"  style="color:#030415;font-size:14px">إنشاء تدوينة</a></li>
-
+                        <li><a href="{{route('myPosts')}}"  style="color:#030415;font-size:14px">تدويناتي</a></li>
                     @endguest
                     <span style="border-left: 6px solid #ffffff;height: 10px;"></span>
                     <li><a href="/" class="menu--active">مطلق الضبيب</a></li>
-
                 </ul>
             </nav>
         </div>
         <div class="header__left header__switches">
             <a href="#" class="nav-switch"><i class="fa fa-bars"></i></a>
             <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+            @if(auth()->check())
+                <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                    <i class="fa fa-sign-out"></i>
+                </a>
+                <form action="{{ route('logout') }}" method="POST" id="logout-form">
+                    @csrf
+                </form>
+            @endif
         </div>
     </div>
 </header>
@@ -70,6 +79,10 @@
 @yield('articles')
 
 @yield('article')
+
+@yield('forms')
+
+@yield('landing')
 
 
 <div class="search-model">

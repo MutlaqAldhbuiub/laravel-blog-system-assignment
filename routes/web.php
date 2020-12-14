@@ -23,9 +23,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function () {
-    return view('test');
-});
 
 Auth::routes();
 
@@ -34,21 +31,22 @@ Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider')
 Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')
     ->name('social.callback');
 
+// Authorized (check if he update his profile and successfully add gender & national id
+
 Route::middleware(['auth'])->group(function () {
-    // Authorized (check if he update his profile and successfully add gender & national id
     Route::get('/authorized', "AuthorizedController@index")->name('show-authorized');
     Route::match(['put', 'patch'], '/authorized', "AuthorizedController@update")->name('authorized');
 
-    // User:
-    Route::get('/settings',"SettingsController@index")->name("settings");
-    Route::post('/settings',"SettingsController@store")->name("settings-store");
-
-    // Main
-    Route::get('/home', 'HomeController@index')->name('home')->middleware([CheckNationalId::class,CheckGender::class]);
-
-    // Posts:
-    Route::get('/posts/create','PostController@create')->name("showCreatePost");
-    Route::get('/posts/{slug}','PostController@show')->name('showPost');
-    Route::post('/posts/create','PostController@store')->name('createPost');
-
+    Route::middleware([CheckGender::class,CheckNationalId::class])->group(function () {
+        // User
+        Route::get('/settings', "SettingsController@index")->name("settings");
+        Route::post('/settings', "SettingsController@store")->name("settings-store");
+        Route::get('/settings/posts', 'PostController@myPosts')->name("myPosts");
+        // Main
+        Route::get('/home', 'HomeController@index')->name('home');
+        // Posts
+        Route::get('/posts/create', 'PostController@create')->name("showCreatePost");
+        Route::get('/posts/{slug}', 'PostController@show')->name('showPost');
+        Route::post('/posts/create', 'PostController@store')->name('createPost');
+    });
 });

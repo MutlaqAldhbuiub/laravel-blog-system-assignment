@@ -9,8 +9,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class PostController extends Controller
-{
+class PostController extends Controller{
     public function index(){
         $posts = DB::table('posts')
             ->select(['title','slug','body','user_id','created_at'])
@@ -51,7 +50,7 @@ class PostController extends Controller
             return response()->json(['message' => "💔💔💔 NOT FOUND 💔💔💔", 'status' => 404]);
         }
         $post->title = $request->input("title");
-        $post->body = $request->input("body");
+        $post->body = urldecode($request->input("body"));
         $post->published = (int) $request->input("published");
         if($post->save()){
             return response()->json(["message" => "🚀🚀🚀 Updated!! 🚀🚀🚀","status" => 200]);

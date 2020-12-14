@@ -36,11 +36,9 @@
                     <i class="fa fa-exclamation-circle"></i>
                 </p>
             @endif
-
             <input type="hidden" name="user_id" value="{{$post->user_id}}">
             <div class="author">
                 <a href="#">
-
                 </a>
                 <div class="twitterx">
                     <a target="_blank" href="#">
@@ -61,19 +59,14 @@
                     </span>
                 @endif
             </div>
-
-
-
             <div class="row blog_row pt-5">
                 <div class="entry-content entry-content singlepostcontentarea">
                     <div id="body">
                         {!! $post->body !!}
                     </div>
-
                     <textarea name="body" class="form-control" rows="3" style="display:none" id="bodyInput">
                                 {!! $post->body !!}
-                </textarea>
-
+                    </textarea>
                     <div id="radioButtons" style="display: none;font-family:zarid-bold,serif">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="published" id="published1" value="1" {{$post->published ? 'checked': ''}}>
@@ -88,8 +81,6 @@
                             </label>
                         </div>
                     </div>
-
-
                     <div class="commentsDIV">
                         <h2 class="footerBackground">التعليقات</h2>
                         <div class="pclist">
@@ -114,74 +105,51 @@
                                 @endforeach
                             </div>
                         </div>
-
-
+                        @if (auth()->check())
                         <h2>انشر تعليقك!</h2>
-                        <div class="addComment">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">محتوى التعليق</label>
-                                <input type="text" class="form-control" id="comment" aria-describedby="comment">
-                                <small id="comment" class="form-text text-muted">ثق تماماً ان لن ولم يتم نشر اي معلومات خاصة بك.</small>
+                            <div class="addComment">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">محتوى التعليق</label>
+                                    <input type="text" class="form-control" id="comment" aria-describedby="comment">
+                                    <small id="comment" class="form-text text-muted">ثق تماماً ان لن ولم يتم نشر اي معلومات خاصة بك.</small>
+                                </div>
+                                <button type="submit" class="site-btn-success" onclick="comment()">انشر التعليق 🚀</button>
                             </div>
-                            <button type="submit" class="site-btn-success" onclick="comment()">انشر التعليق 🚀</button>
-                        </div>
+                        @endif
                     </div>
-
-
-
                     <h2 class="footerBackground">مقالات تستحق القراءة</h2>
-                    <div id="pclist" class="relatedposts">
-                        <div class="pcbox relatedbox"> <a href="https://thmanyah.com/3543/"
-                                                          alt="كيف استطاع المول أن يقتل المدينة؟" title="كيف استطاع المول أن يقتل المدينة؟">
-                                <figure> <img class="pcposter"
-                                              src="https://media.thmanyah.com/media/media/2020/02/southdale_center_1956.jpg"
-                                              alt="كيف استطاع المول أن يقتل المدينة؟ "
-                                              title="كيف استطاع المول أن يقتل المدينة؟"></figure>
-                                <div class="padding20">
-                                    <div class="pctopbox">
-                                        <div class="titleinfo"> بودكاست</div>
-                                        <h3> كيف استطاع المول أن يقتل المدينة؟</h3>
-                                        <div class="clear"></div>
+                    <div id="pclist" class="relatedposts row">
+                        @foreach($randomPosts as $random)
+                            <div class="pcbox relatedbox">
+                                <a href="{{$random->slug}}" alt="{{$random->title}}" title="{{$random->title}}">
+                                    <figure>
+                                        <img class="pcposter"
+                                             src="{{$random->image_url}}"
+                                             alt="{{$random->title}}"
+                                             title="{{$random->title}}">
+                                    </figure>
+                                    <div class="padding20">
+                                        <div class="pctopbox">
+                                            <div class="titleinfo"> تدوينة</div>
+                                            <h3> {{$random->title}}</h3>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="pcinfo">
+                                            <p>{!! substr($random->body,0,150) !!}</p>
+                                        </div>
+                                        <div class="pcmoreinfo">
+                                            <div class="pcdate">
+                                                {{$random->created_at->translatedFormat('d Y ,F ')}}
+                                            </div>
+                                            <div class="pclefter">
+                                                {{$random->user->name}}
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
                                     </div>
-                                    <div class="pcinfo">
-                                        <p> يطلقون علي لقب أب المولات أرفض إنفاق الأموال على هذه المباني البغيضة التي
-                                            دمرت المدن، أنت تذهب لتشتري شيئًا لتجد نفسك وسط الكثير من الأشياء الأخرى حتى
-                                            تنسى ما جئت...</p>
-                                    </div>
-                                    <div class="pcmoreinfo">
-                                        <div class="pcdate">12 فبراير، 2020</div>
-                                        <div class="pclefter">الوليد العيسى</div>
-                                        <div class="clear"></div>
-                                    </div>
-                                </div>
-                            </a></div>
-
-                        <div class="pcbox relatedbox"> <a href="https://thmanyah.com/147/"
-                                                          alt="مخيف جدًا: الذكاء الاصطناعي يبدأ في تربية أطفالنا"
-                                                          title="مخيف جدًا: الذكاء الاصطناعي يبدأ في تربية أطفالنا">
-                                <figure>
-                                    <img class="pcposter"
-                                         src="https://media.thmanyah.com/media/media/2019/07/AL-KID-.jpg"
-                                         alt="مخيف جدًا: الذكاء الاصطناعي يبدأ في تربية أطفالنا "
-                                         title="مخيف جدًا: الذكاء الاصطناعي يبدأ في تربية أطفالنا"></figure>
-                                <div class="padding20">
-                                    <div class="pctopbox">
-                                        <div class="titleinfo"> مقالة</div>
-                                        <h3> مخيف جدًا: الذكاء الاصطناعي يبدأ في تربية أطفالنا</h3>
-                                        <div class="clear"></div>
-                                    </div>
-                                    <div class="pcinfo">
-                                        <p> أعتقد أننا وصلنا للزمن الذي يقوم فيه الجسمال (Robot) بفعل أمور هي من اختصاص
-                                            البشر لكنهم قد ينجزونها بشكل أفضل من البشر فمثلًا موقع Amazon أصبح يستخدم
-                                            الجسمال في مخازنه...</p>
-                                    </div>
-                                    <div class="pcmoreinfo">
-                                        <div class="pcdate">9 أكتوبر، 2016</div>
-                                        <div class="pclefter">تهاني عبدالرحمن</div>
-                                        <div class="clear"></div>
-                                    </div>
-                                </div>
-                            </a></div>
+                                </a>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -239,17 +207,18 @@
             var request = new XMLHttpRequest();
             let windowOBJECT = window.location;
             let apiUrl = windowOBJECT.protocol+"//"+windowOBJECT.host+"/api/posts/{{$post->slug}}";
+
             var params = {
                 'title':titleInput.value,
                 'body':encodeURIComponent(CKEDITOR.instances.bodyInput.getData()),
                 'published': published,
             }
+
             var endpoint = apiUrl + formatParams(params)
 
-            request.open('PUT', endpoint, true);
+            request.open('PUT', apiUrl, true);
             request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-            request.send();
-            // console.log(encodeURIComponent(CKEDITOR.instances.bodyInput.getData()))
+            request.send(formatParamsPost(params));
 
 
             title.style.display = "block";
@@ -357,6 +326,14 @@
 
         function formatParams( params ){
             return "?" + Object
+                .keys(params)
+                .map(function(key){
+                    return key+"="+encodeURIComponent(params[key])
+                })
+                .join("&")
+        }
+        function formatParamsPost( params ){
+            return Object
                 .keys(params)
                 .map(function(key){
                     return key+"="+encodeURIComponent(params[key])

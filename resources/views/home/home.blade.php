@@ -9,7 +9,6 @@
             </div>
 
             <p class="tracking-mode">
-
                 نظام مراقبة المنشورات بناء على جنسك
                 <span style="color:forestgreen">مفعل الان</span>
                 <i class="fa fa-filter"></i>
@@ -17,7 +16,6 @@
             <div class="row blog_row">
 
                 @foreach ($posts as $post)
-
                     <div class="col-lg-4 col-sm-6 blog__grid">
                         <div class="blog__item">
                             <img src="{{$post->image_url}}">

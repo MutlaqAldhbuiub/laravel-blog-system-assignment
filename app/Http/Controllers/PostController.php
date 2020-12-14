@@ -42,10 +42,14 @@ class PostController extends Controller
         $slugify = new Slugify();
         $post = new Post();
         $post->title=$request->input('title');
-        $post->body=$request->input('body');
+        $post->body= urldecode($request->input('body'));
         $post->slug=$slugify->slugify($request->input('title'));
         $post->user_id = $user->id;
-        $post->image_url = $request->input("image_url");
+        if($request->image_url == null || $request->image_url == ""){
+            $post->image_url = "https://i.stack.imgur.com/GNhxO.png";
+        }else{
+            $post->image_url = $request->input("image_url");
+        }
         if(!$post->save()){
             return back()->withErrors(['title' => ['Make sure that your title is correct, because the url slug based on it!']]);
         }
@@ -77,9 +81,15 @@ class PostController extends Controller
             $comment->user = $user;
             $comment->created_at = Carbon::parse($comment->created_at);
         }
-
+        // get random post to show as suggestion
+        $randomPosts = array();
+        $random = Post::inRandomOrder()->where('published', true);
+        $randomPosts[0]=$random->first();
+        $randomPosts[0]->created_at =Carbon::parse($randomPosts[0]->created_at);
+        $randomPosts[1]=$random->skip(1)->first();
+        $randomPosts[1]->created_at =Carbon::parse($randomPosts[1]->created_at);
         if($post){
-            return view("posts.show",["post" => $post,"GenderPrefer" => $post->user->hasPrefer("Prefer gender"),"comments" => $post->comments]);
+            return view("posts.show",["post" => $post,"GenderPrefer" => $post->user->hasPrefer("Prefer gender"),"comments" => $post->comments,'randomPosts'=>$randomPosts]);
         }
     }
 
@@ -115,6 +125,11 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         //
+    }
+
+    public function myPosts(){
+        $posts = auth()->user()->posts;
+        return view("users.posts",['posts'=>$posts]);
     }
 
 

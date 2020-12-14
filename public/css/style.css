@@ -236,6 +236,14 @@ figcaption {
   padding-bottom: 20px;
 
 }
+.entry-content h3 {
+    font-family: "zarid-bold" !important;
+    text-align: start;
+    line-height: 1.4;
+    margin: 50px 0 -10px;
+    padding-bottom: 20px;
+
+}
 
 .pcbox {
   /*float: right;*/
@@ -2041,10 +2049,17 @@ only screen and (min-width: 576px) and (max-width: 767px) {
   padding: 25px 10px 5px 65px;
   margin-bottom: 40px;
   position: relative;
-  background-image: url("../img/quote.png");
   background-repeat: no-repeat;
   background-position: left top;
 }
+
+block-quote p {
+    font-size: 40px;
+    line-height: 1.5em;
+    font-family: "zarid-bold" !important;
+    text-align: initial;
+}
+
 
 @media (max-width: 576px) {
   .blog__post__content blockquote {
@@ -2556,8 +2571,10 @@ only screen and (min-width: 576px) and (max-width: 767px),
     color: #ea5334;
     font-family: "zarid-regular", sans-serif;
     font-size: 17px;
-    text-align: center;
+    text-align: center; !important;
 }
+
+
 
 .radioButtons{
     font-family: "zarid-regular", sans-serif;
@@ -2567,9 +2584,20 @@ only screen and (min-width: 576px) and (max-width: 767px),
     font-family: "zarid-bold" !important;
 }
 
+.zaridRegularFont{
+    font-family: "zarid-regular" !important;
+    font-size: 20px;
+}
+
+.right{
+    text-align: right;
+}
+
 
 .comment{
     border: 1px solid #e8e8e8;
     margin: 15px;
     border-radius: 9px;
 }
+
+
